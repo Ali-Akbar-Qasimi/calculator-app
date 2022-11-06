@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+
+
+//   ### Theme 1
+
+//  #### Backgrounds
+
+$ThemeOneMainBG: hsl(222, 26%, 31%);
+$ThemeOneToggleAndKeyPadBG: hsl(223, 31%, 20%);
+$ThemeOneScreenBG: hsl(224, 36%, 15%);
+//  #### Keys
+$ThemeOneDelAndResetBG: hsl(225, 21%, 49%);
+$ThemeOneDelAndResetShadow: hsl(224, 28%, 35%);
+
+$ThemeOneToggleAndEquelBG: hsl(6, 63%, 50%);
+$ThemeOneEquelShadow: hsl(6, 70%, 34%);
+
+$ThemeOneKeysBG: hsl(30, 25%, 89%);
+$ThemeOneKeysShadow: hsl(28, 16%, 65%);
+//  #### Text
+$ThemeOneTextBlack: hsl(221, 14%, 31%);
+$ThemeOneTextWhite: hsl(0, 0%, 100%);
+
+
+
+//  ### Theme 2
+
+//  #### Backgrounds
+
+$ThemeTwoMainBG: hsl(0, 0%, 90%);
+$ThemeTwoToggleAndKeyPadBG: hsl(0, 5%, 81%);
+$ThemeTwoScreenBG: hsl(0, 0%, 93%);
+//   #### Keys
+$ThemeTwoDelAndResetBG: hsl(185, 42%, 37%);
+$ThemeTwoDelAndResetShadow: hsl(185, 58%, 25%);
+
+$ThemeTwoToggleAndEquelBG: hsl(25, 98%, 40%);
+$ThemeTwoEquelShadow: hsl(25, 99%, 27%);
+
+$ThemeTwoKeysBG : hsl(45, 7%, 89%);
+$ThemeTwoKeysShadow: hsl(35, 11%, 61%);
+//   #### Text
+$ThemeTwoTextBlack: hsl(60, 10%, 19%);
+$ThemeTwoTextWhite: hsl(0, 0%, 100%);
+
+//  ### Theme 3
+
+//  #### Backgrounds
+
+$ThemeThreeMainBG: hsl(268, 75%, 9%);
+$ThemeThreeToggleAndKeyPadAndScreenBG: hsl(268, 71%, 12%);
+
+//  #### Keys
+
+$ThemeThreeDelAndResetBG: hsl(281, 89%, 26%);
+$ThemeThreeDelAndResetShadow: hsl(285, 91%, 52%);
+
+$ThemeThreeToggleAndEquelBG: hsl(176, 100%, 44%);
+$ThemeThreeEquelShadow: hsl(177, 92%, 70%);
+
+$ThemeThreeKeyBG: hsl(268, 47%, 21%);
+$ThemeThreeKeyShadow: hsl(290, 70%, 36%);
+
+//   #### Text
+
+$ThemeThreeTextYellow: hsl(52, 100%, 62%);
+$ThemeThreeTextBlack: hsl(198, 20%, 13%);
+$ThemeThreeTextWhite: hsl(0, 0%, 100%);
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "League Spartan", sans-serif;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    .calc{
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .header{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            .theme-toggle{
+                display: flex;
+                gap: 30px;
+                align-items: center;
+                .toggle-container{
+                    width: 60px;
+                    display: flex;
+                    flex-direction: column;
+                    .numbers{
+                        display: flex;
+                        gap: 12px;
+                        padding: 5px;
+                    }
+                    .toggle{
+                        width: 100%;
+                        height: 20px;
+                        border-radius: 100px;
+                        padding: 4px;
+                        .dot{
+                            width: 13px;
+                            height: 13px;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .input-container{
+            .input{
+                font-size: 32px;
+                width: 100%;
+                border-radius: 10px;
+                height: 50px;
+                font-weight: 700;
+                border: none;
+                outline: none;
+                text-align: end;
+                padding: 40px 30px;
+            }
+        }
+        .keypad-container{
+            text-transform: uppercase;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            gap: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            .key{
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                height: 60px;
+                width: 100%;
+                font-size: 20px;
+                font-weight: 700;
+
+            }
+            
+            .span-2{
+                grid-column: span 2;
+            }
+        }
+    }
+}
+.attribution {
+    color: white;
+    font-size: 11px; text-align: center;
+    margin-top: -20px; 
+}
+.attribution a { 
+    color: hsl(228, 42%, 67%); 
+}
+.container.theme-1{
+    background-color: $ThemeOneMainBG;
+    color: $ThemeOneTextWhite;
+    .calc{
+        .header{
+            .theme-toggle{
+                .toggle-container{
+                    .toggle{
+                        background-color: $ThemeOneToggleAndKeyPadBG;
+                        .dot{
+                            background-color: $ThemeOneToggleAndEquelBG;
+                        }
+                    }
+                }
+            }
+        }
+        .input-container{
+            .input{
+                color: $ThemeOneTextWhite;
+                background-color: $ThemeOneScreenBG;
+            }
+        }
+        .keypad-container{
+            background-color: $ThemeOneToggleAndKeyPadBG;
+            .key{
+                color: $ThemeOneTextBlack;
+                background-color: $ThemeOneKeysBG;
+                box-shadow: 0 5px 0 0 $ThemeOneKeysShadow;
+                &:hover{
+                    background-color: white;
+                }
+            }
+            .equal{
+                box-shadow: 0 5px 0 0 $ThemeOneEquelShadow;
+                background-color: $ThemeOneToggleAndEquelBG;
+            }
+            .reset,.del{
+                box-shadow: 0 5px 0 0 $ThemeOneDelAndResetShadow;
+                background-color: $ThemeOneDelAndResetBG;
+            }
+            .equal,.reset,.del{
+                color: $ThemeOneTextWhite;
+            }
+        }
+    }
+}
+.container.theme-2{
+    background-color: $ThemeTwoMainBG;
+    color: $ThemeTwoTextWhite;
+    .calc{
+        .header{
+            .theme-toggle{
+                .toggle-container{
+                    .toggle{
+                        background-color: $ThemeTwoToggleAndKeyPadBG;
+                        .dot{
+                            background-color: $ThemeTwoToggleAndEquelBG;
+                        }
+                    }
+                }
+            }
+        }
+        .input-container{
+            .input{
+                color: $ThemeTwoTextBlack;
+                background-color: $ThemeTwoScreenBG;
+            }
+        }
+        .keypad-container{
+            background-color: $ThemeTwoToggleAndKeyPadBG;
+            .key{
+                color: $ThemeTwoTextBlack;
+                background-color: $ThemeTwoKeysBG;
+                box-shadow: 0 5px 0 0 $ThemeTwoKeysShadow;
+            }
+            .equal{
+                box-shadow: 0 5px 0 0 $ThemeTwoEquelShadow;
+                background-color: $ThemeTwoToggleAndEquelBG;
+            }
+            .reset,.del{
+                box-shadow: 0 5px 0 0 $ThemeTwoDelAndResetShadow;
+                background-color: $ThemeTwoDelAndResetBG;
+            }
+            .equal,.reset,.del{
+                color: $ThemeTwoTextWhite;
+            }
+        }
+    }
+}
+.container.theme-3{
+    background-color: $ThemeThreeMainBG;
+    color: $ThemeThreeTextYellow;
+    .calc{
+        .header{
+            .theme-toggle{
+                .toggle-container{
+                    .toggle{
+                        background-color: $ThemeThreeToggleAndKeyPadAndScreenBG;
+                        .dot{
+                            background-color: $ThemeThreeToggleAndEquelBG;
+                        }
+                    }
+                }
+            }
+        }
+        .input-container{
+            .input{
+                color: $ThemeThreeTextYellow;
+                background-color: $ThemeThreeToggleAndKeyPadAndScreenBG;
+            }
+        }
+        .keypad-container{
+            background-color: $ThemeThreeToggleAndKeyPadAndScreenBG;
+            .key{
+                color: $ThemeThreeTextYellow;
+                background-color: $ThemeThreeKeyBG;
+                box-shadow: 0 5px 0 0 $ThemeThreeKeyShadow;
+            }
+            .equal{
+                color: $ThemeThreeTextBlack;
+                box-shadow: 0 5px 0 0 $ThemeThreeEquelShadow;
+                background-color: $ThemeThreeToggleAndEquelBG;
+            }
+            .reset,.del{
+                box-shadow: 0 5px 0 0 $ThemeThreeDelAndResetShadow;
+                background-color: $ThemeThreeDelAndResetBG;
+            }
+            .equal,.reset,.del{
+                color: $ThemeThreeTextWhite;
+            }
+        }
+    }
+}

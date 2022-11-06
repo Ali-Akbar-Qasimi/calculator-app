@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "League Spartan", sans-serif;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.container .calc {
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.container .calc .header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .calc .header .theme-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .calc .header .theme-toggle .toggle-container {
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .calc .header .theme-toggle .toggle-container .numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  padding: 5px;
+}
+
+.container .calc .header .theme-toggle .toggle-container .toggle {
+  width: 100%;
+  height: 20px;
+  border-radius: 100px;
+  padding: 4px;
+}
+
+.container .calc .header .theme-toggle .toggle-container .toggle .dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+}
+
+.container .calc .input-container .input {
+  font-size: 32px;
+  width: 100%;
+  border-radius: 10px;
+  height: 50px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  text-align: end;
+  padding: 40px 30px;
+}
+
+.container .calc .keypad-container {
+  text-transform: uppercase;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container .calc .keypad-container .key {
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  height: 60px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.container .calc .keypad-container .span-2 {
+  grid-column: span 2;
+}
+
+.attribution {
+  color: white;
+  font-size: 11px;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.attribution a {
+  color: #8896ce;
+}
+
+.container.theme-1 {
+  background-color: #3a4764;
+  color: white;
+}
+
+.container.theme-1 .calc .header .theme-toggle .toggle-container .toggle {
+  background-color: #232c43;
+}
+
+.container.theme-1 .calc .header .theme-toggle .toggle-container .toggle .dot {
+  background-color: #d03f2f;
+}
+
+.container.theme-1 .calc .input-container .input {
+  color: white;
+  background-color: #182034;
+}
+
+.container.theme-1 .calc .keypad-container {
+  background-color: #232c43;
+}
+
+.container.theme-1 .calc .keypad-container .key {
+  color: #444b5a;
+  background-color: #eae3dc;
+  -webkit-box-shadow: 0 5px 0 0 #b4a597;
+          box-shadow: 0 5px 0 0 #b4a597;
+}
+
+.container.theme-1 .calc .keypad-container .key:hover {
+  background-color: white;
+}
+
+.container.theme-1 .calc .keypad-container .equal {
+  -webkit-box-shadow: 0 5px 0 0 #93261a;
+          box-shadow: 0 5px 0 0 #93261a;
+  background-color: #d03f2f;
+}
+
+.container.theme-1 .calc .keypad-container .reset, .container.theme-1 .calc .keypad-container .del {
+  -webkit-box-shadow: 0 5px 0 0 #404e72;
+          box-shadow: 0 5px 0 0 #404e72;
+  background-color: #637097;
+}
+
+.container.theme-1 .calc .keypad-container .equal, .container.theme-1 .calc .keypad-container .reset, .container.theme-1 .calc .keypad-container .del {
+  color: white;
+}
+
+.container.theme-2 {
+  background-color: #e6e6e6;
+  color: white;
+}
+
+.container.theme-2 .calc .header .theme-toggle .toggle-container .toggle {
+  background-color: #d1cccc;
+}
+
+.container.theme-2 .calc .header .theme-toggle .toggle-container .toggle .dot {
+  background-color: #ca5502;
+}
+
+.container.theme-2 .calc .input-container .input {
+  color: #35352c;
+  background-color: #ededed;
+}
+
+.container.theme-2 .calc .keypad-container {
+  background-color: #d1cccc;
+}
+
+.container.theme-2 .calc .keypad-container .key {
+  color: #35352c;
+  background-color: #e5e4e1;
+  -webkit-box-shadow: 0 5px 0 0 #a69d91;
+          box-shadow: 0 5px 0 0 #a69d91;
+}
+
+.container.theme-2 .calc .keypad-container .equal {
+  -webkit-box-shadow: 0 5px 0 0 #893901;
+          box-shadow: 0 5px 0 0 #893901;
+  background-color: #ca5502;
+}
+
+.container.theme-2 .calc .keypad-container .reset, .container.theme-2 .calc .keypad-container .del {
+  -webkit-box-shadow: 0 5px 0 0 #1b5f65;
+          box-shadow: 0 5px 0 0 #1b5f65;
+  background-color: #377f86;
+}
+
+.container.theme-2 .calc .keypad-container .equal, .container.theme-2 .calc .keypad-container .reset, .container.theme-2 .calc .keypad-container .del {
+  color: white;
+}
+
+.container.theme-3 {
+  background-color: #160628;
+  color: #ffe53d;
+}
+
+.container.theme-3 .calc .header .theme-toggle .toggle-container .toggle {
+  background-color: #1d0934;
+}
+
+.container.theme-3 .calc .header .theme-toggle .toggle-container .toggle .dot {
+  background-color: #00e0d1;
+}
+
+.container.theme-3 .calc .input-container .input {
+  color: #ffe53d;
+  background-color: #1d0934;
+}
+
+.container.theme-3 .calc .keypad-container {
+  background-color: #1d0934;
+}
+
+.container.theme-3 .calc .keypad-container .key {
+  color: #ffe53d;
+  background-color: #341c4f;
+  -webkit-box-shadow: 0 5px 0 0 #871c9c;
+          box-shadow: 0 5px 0 0 #871c9c;
+}
+
+.container.theme-3 .calc .keypad-container .equal {
+  color: #1b2428;
+  -webkit-box-shadow: 0 5px 0 0 #6cf9f2;
+          box-shadow: 0 5px 0 0 #6cf9f2;
+  background-color: #00e0d1;
+}
+
+.container.theme-3 .calc .keypad-container .reset, .container.theme-3 .calc .keypad-container .del {
+  -webkit-box-shadow: 0 5px 0 0 #bc15f4;
+          box-shadow: 0 5px 0 0 #bc15f4;
+  background-color: #58077d;
+}
+
+.container.theme-3 .calc .keypad-container .equal, .container.theme-3 .calc .keypad-container .reset, .container.theme-3 .calc .keypad-container .del {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
